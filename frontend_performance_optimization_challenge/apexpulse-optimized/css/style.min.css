@@ -1,0 +1,49 @@
+.client-logos-section { padding: 40px 24px; border-top: 1px solid rgba(51,65,85,0.4); border-bottom: 1px solid rgba(51,65,85,0.4); background: rgba(30,41,59,0.2); text-align: center; }
+.logos-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; color: #64748b; margin-bottom: 24px; font-weight: 600; }
+.logos-grid { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; max-width: 1000px; margin: 0 auto; }
+.client-logo { height: 32px; width: auto; opacity: 0.65; filter: grayscale(100%); transition: opacity 0.2s; }
+.live-metrics-section { padding: 70px 24px; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 40px; }
+.section-header h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.8px; margin-bottom: 10px; }
+.section-header p { color: var(--text-muted); font-size: 16px; }
+.kpi-cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 30px; }
+.kpi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 20px; }
+.kpi-card .kpi-title { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
+.kpi-card .kpi-value { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.kpi-card .kpi-delta { font-size: 12px; font-weight: 600; color: var(--secondary-color); }
+.architecture-section { padding: 70px 24px; background: rgba(30,41,59,0.3); }
+.architecture-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.architecture-content h3 { font-size: 28px; font-weight: 700; margin-bottom: 14px; }
+.architecture-content p { color: var(--text-muted); font-size: 15px; margin-bottom: 20px; }
+.architecture-content ul { color: #94a3b8; margin-left: 20px; margin-bottom: 20px; }
+.architecture-content li { margin-bottom: 6px; font-size: 14px; }
+.architecture-visual { aspect-ratio: 1100 / 642; background: #1e293b; border-radius: 8px; overflow: hidden; border: 1px solid var(--card-border); }
+.architecture-visual img { width: 100%; height: auto; display: block; aspect-ratio: 1100 / 642; }
+.features-section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+.features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 36px; }
+.feature-box { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; }
+.feature-box .img-wrapper { aspect-ratio: 900 / 550; background: #0f172a; overflow: hidden; }
+.feature-box img { width: 100%; height: auto; display: block; aspect-ratio: 900 / 550; }
+.feature-box-body { padding: 24px; }
+.feature-box-body h4 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.feature-box-body p { color: var(--text-muted); font-size: 14px; }
+.pricing-section { padding: 70px 24px; max-width: 1140px; margin: 0 auto; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; }
+.pricing-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 32px 24px; }
+.pricing-card.featured { border-color: #3b82f6; box-shadow: 0 0 25px rgba(59,130,246,0.18); }
+.pricing-card h4 { font-size: 18px; margin-bottom: 6px; }
+.pricing-card .price-val { font-size: 38px; font-weight: 800; margin-bottom: 16px; }
+.pricing-card .price-val span { font-size: 15px; color: var(--text-muted); font-weight: 400; }
+.pricing-card ul { list-style: none; margin-bottom: 24px; }
+.pricing-card ul li { padding: 7px 0; color: var(--text-muted); font-size: 13.5px; border-bottom: 1px solid rgba(51,65,85,0.5); }
+.faq-section { padding: 70px 24px; max-width: 760px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--card-border); padding: 18px 0; }
+.faq-question { font-size: 17px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
+.faq-answer { color: var(--text-muted); font-size: 14.5px; margin-top: 10px; display: none; }
+.faq-item.open .faq-answer { display: block; }
+.site-footer { padding: 48px 24px 36px; background: #0b1120; border-top: 1px solid var(--card-border); text-align: center; color: var(--text-muted); font-size: 13.5px; }
+@media (max-width: 900px) {
+  .kpi-cards-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .architecture-inner, .features-grid { grid-template-columns: 1fr; }
+  .hero-headline { font-size: 36px; }
+}

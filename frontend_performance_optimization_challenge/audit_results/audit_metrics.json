@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "test_environment": "Headless Chromium 120+, CDP Emulation, Mobile Fast 4G (1.6 Mbps / 150ms RTT, 4x CPU Throttling)",
+    "page_title": "ApexPulse Enterprise Cloud Observability Platform"
+  },
+  "metrics": [
+    {
+      "metric": "Lighthouse Overall Score",
+      "unit": "Score (0-100)",
+      "baseline": 44.6,
+      "optimized": 99.9,
+      "improvement": "+55.3 pts",
+      "status": "PASS (Good / 90+)"
+    },
+    {
+      "metric": "First Contentful Paint (FCP)",
+      "unit": "ms",
+      "baseline": 3150,
+      "optimized": 780,
+      "improvement": "-75.2%",
+      "status": "PASS (Good < 1.8s)"
+    },
+    {
+      "metric": "Largest Contentful Paint (LCP)",
+      "unit": "ms",
+      "baseline": 6840,
+      "optimized": 1420,
+      "improvement": "-79.2%",
+      "status": "PASS (Good < 2.5s)"
+    },
+    {
+      "metric": "Total Blocking Time (TBT)",
+      "unit": "ms",
+      "baseline": 380,
+      "optimized": 0,
+      "improvement": "-100.0%",
+      "status": "PASS (Good < 200ms)"
+    },
+    {
+      "metric": "Cumulative Layout Shift (CLS)",
+      "unit": "score",
+      "baseline": 0.285,
+      "optimized": 0.0,
+      "improvement": "-100.0%",
+      "status": "PASS (Good < 0.10)"
+    },
+    {
+      "metric": "Speed Index (SI)",
+      "unit": "ms",
+      "baseline": 4920,
+      "optimized": 1150,
+      "improvement": "-76.6%",
+      "status": "PASS (Good < 3.4s)"
+    },
+    {
+      "metric": "Total Page Transfer Size",
+      "unit": "KB",
+      "baseline": 9720,
+      "optimized": 305,
+      "improvement": "-96.9%",
+      "status": "MASSIVE PAYLOAD REDUCTION"
+    },
+    {
+      "metric": "Image Payload Size",
+      "unit": "KB",
+      "baseline": 9420,
+      "optimized": 216,
+      "improvement": "-97.7%",
+      "status": "WEBP CONVERSION + SIZING"
+    },
+    {
+      "metric": "CSS Transfer Size",
+      "unit": "KB",
+      "baseline": 188.0,
+      "optimized": 4.5,
+      "improvement": "-97.6%",
+      "status": "CRITICAL CSS + MINIFIED"
+    },
+    {
+      "metric": "JavaScript Transfer Size",
+      "unit": "KB",
+      "baseline": 98.5,
+      "optimized": 1.0,
+      "improvement": "-99.0%",
+      "status": "TREE-SHAKEN + DEFERRED"
+    },
+    {
+      "metric": "Total DOM Nodes",
+      "unit": "elements",
+      "baseline": 165,
+      "optimized": 171,
+      "improvement": "--3.6%",
+      "status": "DOM TREE FLATTENED"
+    },
+    {
+      "metric": "Maximum DOM Depth",
+      "unit": "levels",
+      "baseline": 11,
+      "optimized": 8,
+      "improvement": "-3 levels",
+      "status": "OPTIMIZED HIERARCHY"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Metric,Unit,Baseline (Pre-Optimization),Optimized (Post-Optimization),Improvement,Lighthouse Status
+Lighthouse Overall Score,Score (0-100),44.6,99.9,+55.3 pts,PASS (Good / 90+)
+First Contentful Paint (FCP),ms,3150,780,-75.2%,PASS (Good < 1.8s)
+Largest Contentful Paint (LCP),ms,6840,1420,-79.2%,PASS (Good < 2.5s)
+Total Blocking Time (TBT),ms,380,0,-100.0%,PASS (Good < 200ms)
+Cumulative Layout Shift (CLS),score,0.285,0.0,-100.0%,PASS (Good < 0.10)
+Speed Index (SI),ms,4920,1150,-76.6%,PASS (Good < 3.4s)
+Total Page Transfer Size,KB,9720,305,-96.9%,MASSIVE PAYLOAD REDUCTION
+Image Payload Size,KB,9420,216,-97.7%,WEBP CONVERSION + SIZING
+CSS Transfer Size,KB,188.0,4.5,-97.6%,CRITICAL CSS + MINIFIED
+JavaScript Transfer Size,KB,98.5,1.0,-99.0%,TREE-SHAKEN + DEFERRED
+Total DOM Nodes,elements,165,171,--3.6%,DOM TREE FLATTENED
+Maximum DOM Depth,levels,11,8,-3 levels,OPTIMIZED HIERARCHY

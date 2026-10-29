@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexPulse | Cloud Observability & Telemetry Engine (Optimized)</title>
+  <meta name="description" content="High-throughput real-time distributed telemetry and tracing engine for cloud-native infrastructure.">
+
+  <!-- Resource Hints for Fonts & Critical Origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="fonts/font.css">
+
+  <!-- Preload the critical above-the-fold Largest Contentful Paint (LCP) hero asset -->
+  <link rel="preload" as="image" href="images/hero-dashboard.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Inlined Critical Above-the-Fold CSS for instant First Contentful Paint -->
+  <style>
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --bg-dark: #0f172a;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+header.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--card-border);
+}
+.header-container {
+  max-width: 1280px; margin: 0 auto; padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; font-weight: 700; font-size: 20px; }
+.brand-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 6px; display: grid; place-items: center; font-size: 16px; }
+nav.main-nav ul { display: flex; list-style: none; gap: 28px; }
+nav.main-nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav.main-nav a:hover { color: #fff; }
+.header-actions { display: flex; gap: 12px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 9px 18px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; border: 1px solid transparent; }
+.btn-secondary { background: transparent; color: #fff; border-color: var(--card-border); }
+.btn-primary { background: #2563eb; color: #fff; box-shadow: 0 4px 14px rgba(37,99,235,0.35); }
+.hero-section { padding: 60px 24px 40px; text-align: center; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.3); border-radius: 9999px; color: #60a5fa; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+.hero-headline { font-size: 48px; line-height: 1.15; font-weight: 800; letter-spacing: -1.2px; max-width: 860px; margin: 0 auto 20px; color: #fff; }
+.hero-subhead { font-size: 18px; color: var(--text-muted); max-width: 720px; margin: 0 auto 32px; }
+.hero-actions { display: flex; justify-content: center; gap: 14px; margin-bottom: 40px; }
+.hero-visual-frame {
+  max-width: 1100px; margin: 0 auto; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5), 0 0 0 1px var(--card-border);
+  aspect-ratio: 1400 / 788;
+  background: #1e293b;
+}
+.hero-visual-frame img { width: 100%; height: auto; display: block; aspect-ratio: 1400 / 788; }
+
+  </style>
+
+  <!-- Asynchronously load non-critical stylesheet to prevent render-blocking -->
+  <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+
+  <!-- Web font stylesheet loaded asynchronously with font-display:swap fallback -->
+  <link rel="stylesheet" href="fonts/font.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="fonts/font.css"></noscript>
+
+  <!-- Deferred, minified non-blocking application script -->
+  <script defer src="js/app.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">▲</div>
+        <span>ApexPulse</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#demo" class="btn btn-secondary">Request Demo</a>
+        <a href="#trial" class="btn btn-primary">Start Free Trial</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span>⚡ Next-Gen Kernel Telemetry v3.4 Released</span>
+      </div>
+      <h1 class="hero-headline">
+        Real-Time Telemetry & Distributed Tracing for Modern Cloud Infrastructure
+      </h1>
+      <p class="hero-subhead">
+        Consolidate multi-cloud metrics, streaming logs, and distributed APM traces into a single high-throughput engine. Reduce MTTR by 64% with sub-millisecond trace ingestion and automated anomaly detection.
+      </p>
+      <div class="hero-actions">
+        <a href="#trial" class="btn btn-primary" style="padding: 13px 26px; font-size: 15px;">Deploy in 5 Minutes</a>
+        <a href="#docs" class="btn btn-secondary" style="padding: 13px 26px; font-size: 15px;">Read Whitepaper</a>
+      </div>
+
+      <!-- Optimized LCP Hero Image: WebP format, explicit dimensions, high fetchpriority -->
+      <div class="hero-visual-frame">
+        <img src="images/hero-dashboard.webp" width="1400" height="788" class="hero-image" alt="ApexPulse Distributed Telemetry Dashboard" fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- Client Logos: Native lazy loading, explicit dimensions -->
+    <section class="client-logos-section">
+      <p class="logos-label">Trusted by high-throughput platform engineering teams</p>
+      <div class="logos-grid">
+        <img src="images/logo-1.webp" width="240" height="90" loading="lazy" decoding="async" class="client-logo" alt="AcmeCorp">
+        <img src="images/logo-2.webp" width="240" height="90" loading="lazy" decoding="async" class="client-logo" alt="GlobalFin">
+        <img src="images/logo-3.webp" width="240" height="90" loading="lazy" decoding="async" class="client-logo" alt="HyperScale">
+        <img src="images/logo-4.webp" width="240" height="90" loading="lazy" decoding="async" class="client-logo" alt="DataFlow">
+        <img src="images/logo-5.webp" width="240" height="90" loading="lazy" decoding="async" class="client-logo" alt="CloudZen">
+        <img src="images/logo-6.webp" width="240" height="90" loading="lazy" decoding="async" class="client-logo" alt="NexusAI">
+      </div>
+    </section>
+
+    <!-- Live Telemetry KPI Section -->
+    <section class="live-metrics-section">
+      <div class="section-header">
+        <h2>Real-Time Cluster Throughput</h2>
+        <p>Live global metrics captured via eBPF instrumentation without bytecode injection</p>
+      </div>
+      <div class="kpi-cards-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">Ingestion Rate</div>
+          <div class="kpi-value" id="val-requests">4.82 M req/s</div>
+          <div class="kpi-delta">+18.4% vs last hour</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Global p99 Latency</div>
+          <div class="kpi-value" id="val-latency">14.2 ms</div>
+          <div class="kpi-delta" style="color: #60a5fa;">Optimized</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Active Mesh Nodes</div>
+          <div class="kpi-value" id="val-nodes">842 Nodes</div>
+          <div class="kpi-delta">100% healthy</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Anomaly Error Rate</div>
+          <div class="kpi-value" id="val-errors">0.002%</div>
+          <div class="kpi-delta">-42% MTTR</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section: Lazy loaded below-the-fold with aspect ratio -->
+    <section class="architecture-section" id="architecture">
+      <div class="architecture-inner">
+        <div class="architecture-content">
+          <h3>Distributed Zero-Overhead Ingestion Pipeline</h3>
+          <p>
+            ApexPulse leverages kernel-level eBPF probes combined with a columnar time-series storage backend. Capture 100% of network packets, HTTP payloads, and database queries with less than 0.8% CPU footprint.
+          </p>
+          <ul>
+            <li>Zero code refactoring or agent recompilation required</li>
+            <li>Automated topological service dependency mapping</li>
+            <li>SOC2 Type II and HIPAA compliant end-to-end encryption</li>
+          </ul>
+          <a href="#architecture-docs" class="btn btn-secondary">Explore Architecture Specs</a>
+        </div>
+        <div class="architecture-visual">
+          <img src="images/cloud-architecture.webp" width="1100" height="642" loading="lazy" decoding="async" alt="Cloud Architecture Overview">
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Features Grid: All images lazy loaded with explicit dimensions -->
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <h2>Four Pillars of Unified Observability</h2>
+        <p>Break down data silos with seamless cross-telemetry correlation</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="img-wrapper">
+            <img src="images/feature-traces.webp" width="900" height="550" loading="lazy" decoding="async" alt="Distributed Traces">
+          </div>
+          <div class="feature-box-body">
+            <h4>Distributed Microservice Tracing</h4>
+            <p>Track request spans across multi-cloud Kubernetes clusters with automated bottleneck tagging.</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="img-wrapper">
+            <img src="images/feature-metrics.webp" width="900" height="550" loading="lazy" decoding="async" alt="Multi-Cluster Metrics">
+          </div>
+          <div class="feature-box-body">
+            <h4>High-Resolution Time Series</h4>
+            <p>Ingest millions of metric points per second with nanosecond precision and automated forecasting.</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="img-wrapper">
+            <img src="images/feature-logs.webp" width="900" height="550" loading="lazy" decoding="async" alt="Streaming Logs">
+          </div>
+          <div class="feature-box-body">
+            <h4>Structured Log Streaming & AI Parsing</h4>
+            <p>Search petabytes of application logs instantaneously with structured schema extraction.</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="img-wrapper">
+            <img src="images/feature-cost.webp" width="900" height="550" loading="lazy" decoding="async" alt="Cost Intelligence">
+          </div>
+          <div class="feature-box-body">
+            <h4>Cloud Observability Cost Control</h4>
+            <p>Identify idle pods and unindexed telemetry fields to trim enterprise cloud spend by up to 35%.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+      <div class="section-header">
+        <h2>Transparent Ingestion-Based Pricing</h2>
+        <p>Pay only for active telemetry ingested with predictable volume discounts</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h4>Startup</h4>
+          <div class="price-val">$249 <span>/mo</span></div>
+          <ul>
+            <li>Up to 50 GB Ingestion / mo</li>
+            <li>7-day Trace Retention</li>
+            <li>10 User Seats</li>
+            <li>Community Support</li>
+          </ul>
+          <a href="#buy-starter" class="btn btn-secondary" style="width: 100%;">Get Started</a>
+        </div>
+        <div class="pricing-card featured">
+          <h4>Growth</h4>
+          <div class="price-val">$799 <span>/mo</span></div>
+          <ul>
+            <li>Up to 250 GB Ingestion / mo</li>
+            <li>30-day Trace Retention</li>
+            <li>Unlimited Seats</li>
+            <li>24/7 Dedicated Slack Channel</li>
+          </ul>
+          <a href="#buy-growth" class="btn btn-primary" style="width: 100%;">Start Free 14-Day Trial</a>
+        </div>
+        <div class="pricing-card">
+          <h4>Enterprise</h4>
+          <div class="price-val">Custom</div>
+          <ul>
+            <li>Petabyte-Scale Ingestion</li>
+            <li>Custom Retention (Up to 365 days)</li>
+            <li>Dedicated VPC Deployment</li>
+            <li>99.999% SLA Guarantee</li>
+          </ul>
+          <a href="#contact-sales" class="btn btn-secondary" style="width: 100%;">Contact Enterprise</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How does ApexPulse capture traces without code modifications? <span>+</span></div>
+        <div class="faq-answer">ApexPulse utilizes Linux eBPF probes attached directly to kernel network sockets, extracting OpenTelemetry-compliant trace contexts without requiring SDK wrappers.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the performance overhead on our production clusters? <span>+</span></div>
+        <div class="faq-answer">Benchmark testing demonstrates under 0.8% CPU utilization and less than 12MB RAM usage per node agent, making it safe for latency-critical financial services.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is data encrypted at rest and in transit? <span>+</span></div>
+        <div class="faq-answer">Yes, all telemetry payloads are encrypted in transit via mTLS 1.3 and at rest with AES-256 encryption. We are SOC2 Type II certified.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 ApexPulse Systems, Inc. All rights reserved. Observability Reimagined.</p>
+  </footer>
+
+  <!-- Non-essential analytics loaded asynchronously via requestIdleCallback -->
+  <script>
+    window.addEventListener('load', function() {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(function() {
+          console.log('[Analytics] Deferred analytics tracker initialized during idle time.');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

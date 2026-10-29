@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Inter";
+  src: url("webfont-unoptimized.ttf") format("truetype");
+  font-weight: 400 800;
+  font-display: block;
+}

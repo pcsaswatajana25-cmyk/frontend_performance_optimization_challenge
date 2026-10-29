@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexPulse | Cloud Observability & Telemetry Engine (Baseline)</title>
+
+  <!-- Synchronous render-blocking Google Fonts without font-display:swap or preconnect -->
+  <link rel="stylesheet" href="fonts/font.css">
+
+  <!-- Heavy render-blocking monolithic stylesheet (120KB) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Synchronous render-blocking scripts in head without async/defer -->
+  <script src="js/vendor-bloat.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div class="page-outer-wrapper">
+    <div class="page-inner-container">
+      <div class="theme-wrapper-dark">
+
+        <!-- Header -->
+        <header class="site-header">
+          <div class="header-inner-container">
+            <a href="#" class="brand-wrapper">
+              <div class="brand-logo-icon">▲</div>
+              <span class="brand-title">ApexPulse</span>
+            </a>
+            <nav class="main-navigation">
+              <ul class="nav-list">
+                <li class="nav-item"><a href="#platform" class="nav-link">Platform</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+              </ul>
+            </nav>
+            <div class="header-cta-group">
+              <a href="#demo" class="btn btn-secondary">Request Demo</a>
+              <a href="#trial" class="btn btn-primary">Start Free Trial</a>
+            </div>
+          </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-inner-wrapper">
+            <div class="hero-content-container">
+              <div class="hero-badge-pill">
+                <span>⚡ Next-Gen Kernel Telemetry v3.4 Released</span>
+              </div>
+              <h1 class="hero-headline">
+                Real-Time Telemetry & Distributed Tracing for Modern Cloud Infrastructure
+              </h1>
+              <p class="hero-subhead">
+                Consolidate multi-cloud metrics, streaming logs, and distributed APM traces into a single high-throughput engine. Reduce MTTR by 64% with sub-millisecond trace ingestion and automated anomaly detection.
+              </p>
+              <div class="hero-actions-container">
+                <a href="#trial" class="btn btn-primary" style="padding: 14px 28px; font-size: 16px;">Deploy in 5 Minutes</a>
+                <a href="#docs" class="btn btn-secondary" style="padding: 14px 28px; font-size: 16px;">Read Whitepaper</a>
+              </div>
+            </div>
+
+            <!-- Eager unoptimized 2.9MB hero image with missing width/height attributes (Causes severe CLS) -->
+            <div class="hero-visual-frame">
+              <img src="images/hero-dashboard.png" class="hero-image" alt="ApexPulse Distributed Telemetry Dashboard">
+            </div>
+          </div>
+        </section>
+
+        <!-- Client Logos (Eager loading, no dimensions) -->
+        <section class="client-logos-section">
+          <p class="logos-label">Trusted by high-throughput platform engineering teams</p>
+          <div class="logos-grid">
+            <img src="images/logo-1.png" class="client-logo" alt="AcmeCorp">
+            <img src="images/logo-2.png" class="client-logo" alt="GlobalFin">
+            <img src="images/logo-3.png" class="client-logo" alt="HyperScale">
+            <img src="images/logo-4.png" class="client-logo" alt="DataFlow">
+            <img src="images/logo-5.png" class="client-logo" alt="CloudZen">
+            <img src="images/logo-6.png" class="client-logo" alt="NexusAI">
+          </div>
+        </section>
+
+        <!-- Live Telemetry KPI Section -->
+        <section class="live-metrics-section">
+          <div class="section-header-centered">
+            <h2>Real-Time Cluster Throughput</h2>
+            <p>Live global metrics captured via eBPF instrumentation without bytecode injection</p>
+          </div>
+          <div class="kpi-cards-grid">
+            <div class="kpi-card">
+              <div class="kpi-title">Ingestion Rate</div>
+              <div class="kpi-value" id="val-requests">4.82 M req/s</div>
+              <div class="kpi-delta">+18.4% vs last hour</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Global p99 Latency</div>
+              <div class="kpi-value" id="val-latency">14.2 ms</div>
+              <div class="kpi-delta" style="color: #60a5fa;">Optimized</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Active Mesh Nodes</div>
+              <div class="kpi-value" id="val-nodes">842 Nodes</div>
+              <div class="kpi-delta">100% healthy</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Anomaly Error Rate</div>
+              <div class="kpi-value" id="val-errors">0.002%</div>
+              <div class="kpi-delta">-42% MTTR</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Architecture Section (Heavy 4.1MB image eager loaded below-the-fold) -->
+        <section class="architecture-section" id="architecture">
+          <div class="architecture-inner">
+            <div class="architecture-content">
+              <h3>Distributed Zero-Overhead Ingestion Pipeline</h3>
+              <p>
+                ApexPulse leverages kernel-level eBPF probes combined with a columnar time-series storage backend. Capture 100% of network packets, HTTP payloads, and database queries with less than 0.8% CPU footprint.
+              </p>
+              <ul style="color: #94a3b8; margin-left: 20px; margin-bottom: 24px;">
+                <li style="margin-bottom: 8px;">Zero code refactoring or agent recompilation required</li>
+                <li style="margin-bottom: 8px;">Automated topological service dependency mapping</li>
+                <li style="margin-bottom: 8px;">SOC2 Type II and HIPAA compliant end-to-end encryption</li>
+              </ul>
+              <a href="#architecture-docs" class="btn btn-secondary">Explore Architecture Specs</a>
+            </div>
+            <div class="architecture-visual">
+              <img src="images/cloud-architecture.png" alt="Cloud Architecture Overview">
+            </div>
+          </div>
+        </section>
+
+        <!-- Deep Features Grid (Multiple unoptimized images eager loaded) -->
+        <section class="features-section" id="features">
+          <div class="section-header-centered">
+            <h2>Four Pillars of Unified Observability</h2>
+            <p>Break down data silos with seamless cross-telemetry correlation</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-box">
+              <img src="images/feature-traces.png" alt="Distributed Traces">
+              <div class="feature-box-body">
+                <h4>Distributed Microservice Tracing</h4>
+                <p>Track request spans across multi-cloud Kubernetes clusters with automated bottleneck tagging.</p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <img src="images/feature-metrics.png" alt="Multi-Cluster Metrics">
+              <div class="feature-box-body">
+                <h4>High-Resolution Time Series</h4>
+                <p>Ingest millions of metric points per second with nanosecond precision and automated forecasting.</p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <img src="images/feature-logs.png" alt="Streaming Logs">
+              <div class="feature-box-body">
+                <h4>Structured Log Streaming & AI Parsing</h4>
+                <p>Search petabytes of application logs instantaneously with structured schema extraction.</p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <img src="images/feature-cost.png" alt="Cost Intelligence">
+              <div class="feature-box-body">
+                <h4>Cloud Observability Cost Control</h4>
+                <p>Identify idle pods and unindexed telemetry fields to trim enterprise cloud spend by up to 35%.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
+          <div class="section-header-centered">
+            <h2>Transparent Ingestion-Based Pricing</h2>
+            <p>Pay only for active telemetry ingested with predictable volume discounts</p>
+          </div>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <h4>Startup</h4>
+              <div class="price-val">$249 <span>/mo</span></div>
+              <ul>
+                <li>Up to 50 GB Ingestion / mo</li>
+                <li>7-day Trace Retention</li>
+                <li>10 User Seats</li>
+                <li>Community Support</li>
+              </ul>
+              <a href="#buy-starter" class="btn btn-secondary" style="width: 100%;">Get Started</a>
+            </div>
+            <div class="pricing-card featured">
+              <h4>Growth</h4>
+              <div class="price-val">$799 <span>/mo</span></div>
+              <ul>
+                <li>Up to 250 GB Ingestion / mo</li>
+                <li>30-day Trace Retention</li>
+                <li>Unlimited Seats</li>
+                <li>24/7 Dedicated Slack Channel</li>
+              </ul>
+              <a href="#buy-growth" class="btn btn-primary" style="width: 100%;">Start Free 14-Day Trial</a>
+            </div>
+            <div class="pricing-card">
+              <h4>Enterprise</h4>
+              <div class="price-val">Custom</div>
+              <ul>
+                <li>Petabyte-Scale Ingestion</li>
+                <li>Custom Retention (Up to 365 days)</li>
+                <li>Dedicated VPC Deployment</li>
+                <li>99.999% SLA Guarantee</li>
+              </ul>
+              <a href="#contact-sales" class="btn btn-secondary" style="width: 100%;">Contact Enterprise</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+          <div class="section-header-centered">
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How does ApexPulse capture traces without code modifications? <span>+</span></div>
+            <div class="faq-answer">ApexPulse utilizes Linux eBPF probes attached directly to kernel network sockets, extracting OpenTelemetry-compliant trace contexts without requiring SDK wrappers.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">What is the performance overhead on our production clusters? <span>+</span></div>
+            <div class="faq-answer">Benchmark testing demonstrates under 0.8% CPU utilization and less than 12MB RAM usage per node agent, making it safe for latency-critical financial services.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Is data encrypted at rest and in transit? <span>+</span></div>
+            <div class="faq-answer">Yes, all telemetry payloads are encrypted in transit via mTLS 1.3 and at rest with AES-256 encryption. We are SOC2 Type II certified.</div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="footer-container">
+            <p>&copy; 2026 ApexPulse Systems, Inc. All rights reserved. Observability Reimagined.</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
